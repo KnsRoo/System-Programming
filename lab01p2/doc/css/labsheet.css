@@ -1,0 +1,79 @@
+/**********************************************************
+ * Отдельный стиль для комманд вводимых в консоль
+ */
+
+.console {
+  background-color: #660033;
+  border-color: #000000;
+  color: #FFFFFF;
+}
+
+/**********************************************************
+ * Фиксируем ширину столбца с номерами строк исходного кода
+ */
+
+table td.lineNumbers {
+  width: 30pt;
+}
+
+/**********************************************************
+ * Step
+ */
+
+h1 {
+  counter-reset:step;
+}
+
+h2 {
+  counter-reset:step;
+}
+
+.step {
+  border: 1px solid;
+  border-color: #ccc;
+  border-radius: 3px;
+  margin: 6px 0px 6px 30px;
+  padding:6px 10px;
+  position: relative;
+  counter-increment: step;
+}
+
+.step:before {
+  content: counter(step);
+  font-size: 10pt;
+  font-weight: 600;
+  color: #555;
+  text-align: center;
+  background: #eee;
+  border: 1px solid;
+  border-color: #ccc;
+  float: left;
+  position: absolute;
+  top: 6px;
+  left: -40px;
+  border-radius: 8px 0px 0px 8px;
+  padding:0px 0px;
+
+  /** define it as a block element **/
+  display: block;
+  width: 40px;
+}
+
+.step > :first-child {
+   margin-top: 0;
+}
+
+.step > :last-child {
+   margin-bottom: 0;
+}
+
+#TOC {
+  background: #eee;
+  border: 1px solid;
+  border-color: #ccc;
+  border-radius: 3px;
+  margin: 6px 6px 6px 6px;
+  width: 66%;
+  padding:6px 10px;
+  position: relative;
+}

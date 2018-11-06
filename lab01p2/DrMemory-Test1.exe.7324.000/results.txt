@@ -1,0 +1,26 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+Dr. Memory results for pid 7324: "Test1.exe"
+Application cmdline: "build\Tests\Test1.exe"
+Recorded 115 suppression(s) from default E:\MyFiles\lab01p2\dr\bin\suppress-default.txt
+Running on an unsupported operating system. Please download http://drmemory.org/syscalls_wow64.txt and save as E:\MyFiles\lab01p2\dr\bin\syscalls_wow64.txt to avoid false positives and other problems. If that fails, please file a bug report.
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+NO ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      4 unique,     4 total,   4134 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: E:\MyFiles\lab01p2\dr\drmemory\logs\DrMemory-Test1.exe.7324.000\results.txt
