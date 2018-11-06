@@ -1,0 +1,63 @@
+Dr. Memory version 1.11.0 build 2 built on Aug 29 2016 02:42:07
+start time: 3662772:39:35.274 == 12:39:35.274 11/06/2018
+Recorded 115 suppression(s) from default E:\MyFiles\lab01p2\dr\bin\suppress-default.txt
+Syscall mismatch detected.  Running on unknown kernel version!
+Running on an unsupported operating system. Please download http://drmemory.org/syscalls_wow64.txt and save as E:\MyFiles\lab01p2\dr\bin\syscalls_wow64.txt to avoid false positives and other problems. If that fails, please file a bug report.
+new thread #0 id=17012
+
+module load event: "Test1.exe" 0x00400000-0x0040f000 modid: 1 E:\MyFiles\lab01p1\build\Tests\Test1.exe
+
+module load event: "dynamorio.dll" 0x69ae0000-0x69c3d000 modid: 2 E:\MyFiles\lab01p2\dr\dynamorio\lib32\release\dynamorio.dll
+
+module load event: "drmemorylib.dll" 0x73800000-0x73a26000 modid: 3 E:\MyFiles\lab01p2\dr\bin\release\drmemorylib.dll
+
+module load event: "msvcrt.dll" 0x73aa0000-0x73b5d000 modid: 4 C:\WINDOWS\System32\msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new == new[] => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+WARNING: new/delete has no local wrapper => disabling mismatch detection for msvcrt.dll
+
+module load event: "KERNEL32.dll" 0x74020000-0x740f0000 modid: 5 C:\WINDOWS\System32\KERNEL32.DLL
+
+module load event: "KERNELBASE.dll" 0x76bb0000-0x76d87000 modid: 6 C:\WINDOWS\System32\KERNELBASE.dll
+
+module load event: "ntdll.dll" 0x77050000-0x771dc000 modid: 7 C:\WINDOWS\SYSTEM32\ntdll.dll
+WARNING: unhandled system calls found
+WARNING: unable to load symbols for C:\WINDOWS\System32\KERNEL32.DLL
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     1x (leaked      25 bytes): default i#781: argv[] possible leak in mingw CRT
+
+NO ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+     73 ignored assumed-innocuous system leak(s)
+      4 unique,     4 total,   4128 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: E:\MyFiles\lab01p2\dr\drmemory\logs\DrMemory-Test1.exe.8208.000\results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+NO POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential GDI usage error(s)
+      0 unique,     0 total potential handle leak(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: E:\MyFiles\lab01p2\dr\drmemory\logs\DrMemory-Test1.exe.8208.000\potential_errors.txt
+Exiting @0:00:03.268 in thread 17012
+LOG END
